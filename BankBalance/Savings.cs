@@ -6,18 +6,25 @@ namespace BankBalance
 {
     class Savings : Account
     {
+        private string AccountHolder { get; set; }
         protected decimal balance { get; set; }
 
         protected override decimal StartBalance { set { base.StartBalance = value + 50; } }
         
         public Savings() { }
-        public Savings( decimal balance)
+        public Savings( string name , decimal balance)
         {
-            Console.WriteLine("Welcome to your saving account");
+            AccountHolder = name;
             BankBalance = balance + StartBalance ;
+            Console.WriteLine($"Welcome {AccountHolder} to your account");
             ShowStartBalance();
             ShowCurrentBalance();
             ShowClosingBalance();
+           
+        }
+
+        private void WelcomeMessage()
+        {
            
         }
 
@@ -28,8 +35,9 @@ namespace BankBalance
 
         public override void ShowStartBalance()
         {
+            
             base.ShowStartBalance(); //optional call to the base method
-            Console.WriteLine($"Your Saving account was credited: {StartBalance.ToString("C")}");
+            Console.WriteLine($"Your account was credited: {StartBalance.ToString("C")}");
           
         }
 

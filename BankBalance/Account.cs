@@ -12,7 +12,7 @@ namespace BankBalance
 
         protected Account()
         {
-            Console.WriteLine("Inside the Account base class constructor");
+            //Console.WriteLine("Inside the Account base class constructor");
             StartBalance = 0;
         }
 

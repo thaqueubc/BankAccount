@@ -11,18 +11,19 @@ namespace BankBalance
         private string AccountHolderB { get; set; }
 
         public JointAccount(string accountHolderA, string accountHolderB, decimal balance)
-            : base(balance)
+            : base($"{accountHolderA} and {accountHolderB}" , balance)
         {
+            ShowAccountHolderName();
             AccountHolderA = accountHolderA;
             AccountHolderB = accountHolderB;
            
         }
 
-        public void showAccountHolderName()
+        public void ShowAccountHolderName()
         {
-            Console.WriteLine("Acoount Holder A : " + AccountHolderA);
-            Console.WriteLine("Acoount Holder B : " + AccountHolderB);
-
+            //Console.WriteLine("Acoount Holder A : " + AccountHolderA);
+            //Console.WriteLine("Acoount Holder B : " + AccountHolderB);
+            Console.WriteLine($"Welcome {AccountHolderA} and {AccountHolderB} to your Joint Account");
         }
 
 
