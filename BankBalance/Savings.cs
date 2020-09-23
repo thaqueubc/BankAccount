@@ -23,11 +23,6 @@ namespace BankBalance
            
         }
 
-        private void WelcomeMessage()
-        {
-           
-        }
-
         public void AddMonthlyInterest(decimal interest)
         {
             BankBalance *= (1.0m + interest);
